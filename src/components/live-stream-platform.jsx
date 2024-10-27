@@ -60,7 +60,7 @@ export default function LiveStreamPlatform() {
     <>
       <a href="#home" className="hover:text-blue-400 transition-colors">Home</a>
       {/* <a href="#services" className="hover:text-blue-400 transition-colors">Services</a> */}
-      <a href="#ai-chat" className="hover:text-blue-400 transition-colors">AI Chat</a>
+      {/* <a href="#ai-chat" className="hover:text-blue-400 transition-colors">AI Chat</a> */}
       {/* <a href="#writing" className="hover:text-blue-400 transition-colors">Writing</a> */}
       <a href="#recording" className="hover:text-blue-400 transition-colors">Video Call</a>
     </>
@@ -122,10 +122,10 @@ export default function LiveStreamPlatform() {
         </div>
 
         <div id="services" className="mb-16 mx-auto flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-5xl mx-auto">
             {[
               { icon: <Video className="h-12 w-12" />, title: "Video Call", description: "Start a video call with your audience" },
-              { icon: <MessageSquare className="h-12 w-12" />, title: "AI Chat", description: "Engage with our intelligent chatbot" },
+              // { icon: <MessageSquare className="h-12 w-12" />, title: "AI Chat", description: "Engage with our intelligent chatbot" },
               // { icon: <Pen className="h-12 w-12" />, title: "Writing Tools", description: "Create and edit your content" }
             ].map((service, index) => (
               <div key={index} className="backdrop-blur-lg bg-white/20 dark:bg-black/20 rounded-3xl p-8 text-center flex flex-col justify-center items-center transition-all hover:transform hover:scale-105 hover:text-blue-500">

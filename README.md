@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+# `LiveStream / meet-group  🌟`
 
-First, run the development server:
+<i> 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Welcome to **LiveStream/meet-group** ! This platform, built on Next.js, offers a seamless and free video calling experience for groups. Whether you're collaborating on a project, catching up with friends, or hosting a virtual event, LiveStream / meet-group has got you covered. 
+</i>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features 📋
+- **Free Group Video Calls**: Connect with multiple participants in high-quality video calls.
+- **Screen Sharing**: Share your screen effortlessly to present ideas, documents, or anything else.
+- **Group Chat**: Engage in real-time conversations with all participants during the call.
+- **Reactions**: Express yourself with fun and interactive reactions.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Join us and experience the future of virtual meetings with LiveStream / meet-group! 🌟
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+</i>
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br> 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+# Technologies Used 🔧
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Frontend**: 
+   - ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) 
+   - ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+- **SDK & Backend**:
+   - ![ZegoCloud](https://cdn-b.saashub.com/images/app/service_logos/214/abfx1r2e4jwb/large.png?1668494327)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Build & Deployment**: 
+   - ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+
+   - ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
+## Getting Started 🚀
+
+To get started , follow these steps:
+
+### Prerequisites 🛠️
+
+- **Node.js**: Ensure you have Node.js installed. [Download Node.js](https://nodejs.org/)
+
+
+### Setup 📝
+
+1. **Clone the Repository**
+
+   First, clone the repository from GitHub to your local machine:
+
+   ```bash
+   https://github.com/sujalsharma2904/Live-_Streaming-Platform.git
+   ```
+
+2. **Install Dependencies**
+
+   Use NPM to install the necessary dependencies for the project:
+
+   ```bash
+   npm install
+   ```
+
+3. **Create Environment Variables**
+
+   Create a `.env.local` file from the `.env.sample` file provided:
+
+   ```bash
+   cp .env.sample .env.local
+   ```
+
+   Update the `.env.local` file with your ZegoCloud AppId, Server Secret and other necessary environment variables.
+
+4. **Run the Development Server**
+
+   Start the development server using NPM:
+
+   ```bash
+   npm run dev
+   ```
+
+   ***Open your browser*** and go to `http://localhost:3000` to view the application. 🌐
+
+## Usage 📖
+
+- **Homepage**: Provides an introduction to LiveStream/meet-group and features a header and footer for easy navigation. 🏠
+- **Group Video Calls**: Start or join high-quality group video calls with ease. 📹
+- **Group Chat**: Engage in real-time conversations with participants during the video call. 💬
+- **Screen Sharing**: Share your screen effortlessly to present ideas, documents, or anything else during the call. 🖥️
+
+
+
+
+
+## Group Members
+
+<table>
+<tr>
+<td align="center" style="word-wrap: break-word; width:150.0; height: 150.0">
+            
+ <sub style="font-size:14px"><b>Sujal Sharma (22053204)</b></sub>
+</td>
+
+
+<td align="center" style="word-wrap: break-word; width:150.0; height: 150.0">
+            
+ <sub style="font-size:14px"><b>Diya Panda (22053158)</b></sub>
+</td>
+
+<td align="center" style="word-wrap: break-word; width:150.0; height: 150.0">
+            
+ <sub style="font-size:14px"><b>Tanisha Mukherjee (2205254)</b></sub>
+</td>
+
+
+<td align="center" style="word-wrap: break-word; width:150.0; height: 150.0">
+            
+ <sub style="font-size:14px"><b>Shreyartha Roy (22051376)  </b></s9ub>
+</td>
+
+<td align="center" style="word-wrap: break-word; width:150.0; height: 150.0">
+            
+ <sub style="font-size:14px"><b>Chinmoyee Ghosh (2205892)</b></sub>
+</td>
+    
+</tr>
+</table>
+
