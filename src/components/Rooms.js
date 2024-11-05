@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
+import { useSession } from 'next-auth/react';
 
 function randomID(len) {
     let result = '';
@@ -17,6 +18,9 @@ function randomID(len) {
 
 const Rooms = ({roomId}) => {
     const roomID = (roomId===undefined || roomId===null || roomId==='' || roomId==="")?randomID(10):roomId;
+    const {data:sessions} = useSession();
+    const name = sessions?.user?.name || randomID(5);
+
 
     let myMeeting = async (element) => {
 
@@ -26,7 +30,7 @@ const Rooms = ({roomId}) => {
 
         // console.log(appID, serverSecret, roomID);
 
-        const kitToken =  ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID,  randomID(5),  randomID(5));
+        const kitToken =  ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID,  randomID(5),  name);
        
         // Create instance object from Kit Token.
         const zp = ZegoUIKitPrebuilt.create(kitToken);

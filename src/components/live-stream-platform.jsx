@@ -8,6 +8,8 @@ import { Video, MessageSquare, Pen, Circle, Sun, Moon, Menu } from "lucide-react
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useRouter } from 'next/navigation'
+import { FcGoogle } from "react-icons/fc";
+import {signIn, signOut, useSession} from 'next-auth/react';
 
 export default function LiveStreamPlatform() {
   const [messages, setMessages] = useState([])
@@ -20,6 +22,17 @@ export default function LiveStreamPlatform() {
   const [roomName, setRoomName] = useState("");
 
   const router = useRouter();
+  const {data:session} = useSession();
+
+  // console.log(session);
+
+  const features = session ? [
+    { icon: <img src={session?.user?.image} className="h-12 w-12 rounded-full"/>, title: session?.user?.name, description:session?.user?.email},
+    { icon: <Video className="h-12 w-12" />, title: "Video Call", description: "Start a video call with your audience" },
+  ] : [
+    { icon: <Video className="h-12 w-12" />, title: "Video Call", description: "Start a video call with your audience" },
+    // { icon: <img src={session?.user?.image} className="h-12 w-12 rounded-full"/>, title: session?.user?.name, description:session?.user?.email},
+  ];
 
   useEffect(() => {
     document.body.classList.toggle('dark', isDarkMode)
@@ -30,6 +43,14 @@ export default function LiveStreamPlatform() {
       setMessages([...messages, inputMessage])
       setInputMessage('')
     }
+  }
+
+  const handleLogin = ()=>{
+    signIn("google")
+  }
+
+  const handleSignOut =()=>{
+    signOut();
   }
 
   const startRecording = async () => {
@@ -105,10 +126,26 @@ export default function LiveStreamPlatform() {
                 </SheetContent>
               </Sheet>
             </div>
+            
+
+           <div className="flex flex-row-reverse md:gap-x-10 gap-x-4">
             <div className="flex items-center space-x-2">
               <Sun className="h-4 w-4" />
               <Switch checked={isDarkMode} onCheckedChange={toggleDarkMode} />
               <Moon className="h-4 w-4" />
+            </div>
+            { 
+            !session?
+            <button className="bg-white/20 shadow-md  px-3 py-2 rounded-full border-black"
+            onClick={handleLogin}
+            >
+              <div className="flex gap-x-2 items-center justify-between">
+              <div><FcGoogle/></div>
+              <div className="text-sm font-sans font-semibold">Sign in with Google</div>
+              </div>
+            </button>
+            : <Button onClick={handleSignOut}>Sign Out</Button>
+}
             </div>
           </div>
         </nav>
@@ -122,12 +159,8 @@ export default function LiveStreamPlatform() {
         </div>
 
         <div id="services" className="mb-16 mx-auto flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-5xl mx-auto">
-            {[
-              { icon: <Video className="h-12 w-12" />, title: "Video Call", description: "Start a video call with your audience" },
-              // { icon: <MessageSquare className="h-12 w-12" />, title: "AI Chat", description: "Engage with our intelligent chatbot" },
-              // { icon: <Pen className="h-12 w-12" />, title: "Writing Tools", description: "Create and edit your content" }
-            ].map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {features.map((service, index) => (
               <div key={index} className="backdrop-blur-lg bg-white/20 dark:bg-black/20 rounded-3xl p-8 text-center flex flex-col justify-center items-center transition-all hover:transform hover:scale-105 hover:text-blue-500">
                 {service.icon}
                 <h3 className="text-2xl font-semibold my-4">{service.title}</h3>
