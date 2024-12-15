@@ -93,37 +93,3 @@ To get started , follow these steps:
 
 
 
-## Group Members
-
-<table>
-<tr>
-<td align="center" style="word-wrap: break-word; width:150.0; height: 150.0">
-            
- <sub style="font-size:14px"><b>Sujal Sharma (22053204)</b></sub>
-</td>
-
-
-<td align="center" style="word-wrap: break-word; width:150.0; height: 150.0">
-            
- <sub style="font-size:14px"><b>Diya Panda (22053158)</b></sub>
-</td>
-
-<td align="center" style="word-wrap: break-word; width:150.0; height: 150.0">
-            
- <sub style="font-size:14px"><b>Tanisha Mukherjee (2205254)</b></sub>
-</td>
-
-
-<td align="center" style="word-wrap: break-word; width:150.0; height: 150.0">
-            
- <sub style="font-size:14px"><b>Shreyartha Roy (22051376)  </b></s9ub>
-</td>
-
-<td align="center" style="word-wrap: break-word; width:150.0; height: 150.0">
-            
- <sub style="font-size:14px"><b>Chinmoyee Ghosh (2205892)</b></sub>
-</td>
-    
-</tr>
-</table>
-
